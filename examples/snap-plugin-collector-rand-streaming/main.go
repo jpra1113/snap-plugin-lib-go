@@ -20,8 +20,8 @@ limitations under the License.
 package main
 
 import (
-	"github.com/intelsdi-x/snap-plugin-lib-go/examples/snap-plugin-collector-rand-streaming/rand"
-	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin"
+	"github.com/jpra1113/snap-plugin-lib-go/examples/snap-plugin-collector-rand-streaming/rand"
+	"github.com/jpra1113/snap-plugin-lib-go/v1/plugin"
 )
 
 const (

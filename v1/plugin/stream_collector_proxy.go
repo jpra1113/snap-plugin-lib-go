@@ -10,7 +10,7 @@ import (
 	"golang.org/x/net/context"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin/rpc"
+	"github.com/jpra1113/snap-plugin-lib-go/v1/plugin/rpc"
 )
 
 const (

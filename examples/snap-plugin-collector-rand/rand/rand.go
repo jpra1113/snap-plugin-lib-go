@@ -26,7 +26,7 @@ import (
 
 	"errors"
 
-	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin"
+	"github.com/jpra1113/snap-plugin-lib-go/v1/plugin"
 	"github.com/urfave/cli"
 )
 

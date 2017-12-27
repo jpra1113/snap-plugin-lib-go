@@ -22,7 +22,7 @@ package plugin
 import (
 	"strings"
 
-	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin/rpc"
+	"github.com/jpra1113/snap-plugin-lib-go/v1/plugin/rpc"
 )
 
 type ConfigPolicy struct {

@@ -20,8 +20,8 @@ limitations under the License.
 package main
 
 import (
-	"github.com/intelsdi-x/snap-plugin-lib-go/examples/snap-plugin-publisher-file/file"
-	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin"
+	"github.com/jpra1113/snap-plugin-lib-go/examples/snap-plugin-publisher-file/file"
+	"github.com/jpra1113/snap-plugin-lib-go/v1/plugin"
 )
 
 const (
