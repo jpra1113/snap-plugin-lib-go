@@ -86,11 +86,11 @@ type Collector interface {
 	CollectMetrics([]Metric) ([]Metric, error)
 }
 
-type StartCollector struct {
+type CollectorInfo struct {
 	Collector
-
 	PluginName    string
 	PluginVersion int
+	Opts          []MetaOpt
 }
 
 // Processor is a plugin which filters, aggregates, or decorates data in the
@@ -367,8 +367,8 @@ func StartCollector(plugin Collector, name string, version int, opts ...MetaOpt)
 	return 0
 }
 
-func StartCollectors(collectors []StartCollector, opts ...MetaOpt) int {
-	for i, plugin := range collectors {
+func StartCollectors(collectors []CollectorInfo) int {
+	for _, plugin := range collectors {
 		app = cli.NewApp()
 		app.Flags = Flags
 		app.Action = startPlugin
@@ -376,8 +376,8 @@ func StartCollectors(collectors []StartCollector, opts ...MetaOpt) int {
 		appArgs.plugin = plugin
 		appArgs.name = plugin.PluginName
 		appArgs.version = plugin.PluginVersion
-		appArgs.opts = opts
-		app.Version = strconv.Itoa(version)
+		appArgs.opts = plugin.Opts
+		app.Version = strconv.Itoa(plugin.PluginVersion)
 		app.Usage = "a Snap collector"
 		err := app.Run(getOSArgs())
 		if err != nil {
